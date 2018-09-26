@@ -46,10 +46,9 @@ public class PilotInMemoryService implements PilotService{
 	public PilotModel delete(String id) {
 		// TODO Auto-generated method stub
 		PilotModel res = null;
-		for(int i = 0; i < archivePilot.size(); i++) {
-			if(archivePilot.get(i).getId().equals(id)) {
-				res = archivePilot.get(i);
-				archivePilot.remove(i);				
+		for(PilotModel pilot: archivePilot) {
+			if(pilot.getId().equals(id)) {
+				res = pilot;
 			}
 		}
 		return res;

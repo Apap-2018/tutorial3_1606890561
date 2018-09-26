@@ -68,12 +68,12 @@ public class PilotController {
 		return result;
 	}
 	
-	@RequestMapping("localhost:8080/pilot/delete/id/{id}")
+	@RequestMapping("/pilot/delete/id/{id}")
 	public String deleteById(@PathVariable String id) {
 		String result = "deleteById";
 		PilotModel archive = pilotService.delete(id);
 		if(archive == null) result = "error"; 
-		return "deleteById";
+		return result;
 	}
 	
 }
